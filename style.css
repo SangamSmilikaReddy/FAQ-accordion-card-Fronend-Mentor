@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+p{
+    font-weight: 400;
+}
+body{
+    background-image: linear-gradient(to right top, #af67e9, #9f67e9, #8d66e9, #7a66e8, #6565e7);
+    background-repeat: no-repeat;
+    background-size: auto 1000px;
+    position: relative;
+    z-index: 1;
+}
+.pics{
+    background-image: url(bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x:-590px;
+    background-position-y:-280px;
+}
+h1{
+    margin-left: 16px;
+    font-weight: 700;
+}
+#women{
+    position: relative;
+    z-index: 1;
+    height: 360px;
+    width: 440px;
+    float: left;
+    margin-left: -70px;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+
+}
+#box{
+    position: relative;
+    z-index: 2;
+    top: 215px;
+    left: -460px;
+
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    background-color: white;
+    border-radius: 20px;
+    margin: 220px 280px 0px 280px;
+}
+.words{
+    margin-left: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.accordion {
+    background-color: white;
+    color: hsl(237, 12%, 33%);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  .accordion:hover {
+    color: hsl(14, 88%, 65%);
+  }
+  div.line > .accordion:hover + #box{
+    position: relative;
+    z-index: 2;
+    top: 200px;
+    left: -460px;
+  }
+  .active{
+      text-decoration: solid 2px;
+      color: black;
+      font-weight: 700;
+  }
+  .active:hover{
+    color: black;
+}
+  
+  /* Style the accordion panel. Note: hidden by default */
+
+  .panel {
+    padding:0 16px;
+    background-color: white;
+    color:  hsl(240, 6%, 50%);
+    max-height: 0;
+    max-width: 315px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .panel p{
+    font-size: 12px;
+}
+
+  .accordion:after {
+    content: url(icon-arrow-down.svg); /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float:right;
+
+  }
+  
+  .active:after {
+    content: url(icon-arrow-down.svg);
+    transform: rotate(180deg); /* Unicode character for "minus" sign (-) */
+  }
+  .line:after {
+    content: "";
+    display: block;
+    width: 320px;
+    height: 0.5px;
+    margin-left: 18px;
+    background: hsl(240, 5%, 91%);
+    position: absolute;
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        border-radius: 20px;
+        max-width: 330px ;
+        margin: 150px 25px 0px 25px;
+    }
+    .pics{
+        background-image: url(bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 73%;
+        background-position-x:50px;
+        background-position-y:-130px;
+    }
+    #women{
+        position: relative;
+        z-index: 1;
+        height: 175px;
+        width: 240px;
+        margin-left: 50px;
+        margin-top: -100px;
+        margin-bottom: 40px;
+    
+    }
+    #box{
+        width: 75px;
+        height: 75px;
+        position: relative;
+        z-index: 2;
+        top: -140px;
+        left: 50px;
+    }
+    .words{
+        margin-left: 10px;
+        margin-top: -80px;
+    }
+    .line:after{
+        width: 280px;
+    }
+    h1{
+        margin-left: 120px;
+    }
+  }
+      
